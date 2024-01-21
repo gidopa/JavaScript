@@ -1,5 +1,4 @@
-console.log(12123);
-console.log('이게 맞나')
-var a = 3;
-console.log(a);
-console.log("날개피고 살자");
+console.log("Hello World") ; 
+console.log("HI")
+// 세미콜론 안찍어도 되지만 안찍어서 에러가 나도 찍어서 나는 경우 x
+// 주석은 // 2개
