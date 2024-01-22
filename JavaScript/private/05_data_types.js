@@ -49,7 +49,7 @@ console.log(iveYujun);
 
 const iveWonYoung = `아이브
 장원영`;
-console.log(iveWonYoung);
+console.log("여기"+iveWonYoung);
 
 const groupnName = '아이브';
 console.log(groupnName + ' 안유진');
