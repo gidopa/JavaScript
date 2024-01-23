@@ -50,3 +50,4 @@ while(number<10){
 
 //break -> 반복문에서 나옴
 //continue 한번 뛰어 넘고 다음 iter
+
