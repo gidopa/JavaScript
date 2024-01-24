@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        1.input태그
+        - 다양한 입력할 수 있는 화면을 띄우고, 사용자가 입력한 정보를 받을 때 사용되는 태그
+        - 기본문법
+        <input type= palceholder= ...>
+        2.input 태그에 다양한 입력할 디자인 유형을 설정하는 type 설정 - deafault 는 text
+        3.<input type = text> 텍스트필드와 password필드에서 사용하는 주요 다른 속성
+        - size 속성 :  텍스트필드와 비밀번호필드 화면에 입력한 데이터가 몇 글자가 보이도록 할건지 지정
+        - value 속성 : 텍스트필드 요소가 화면에 표실될때 텍스트필드 부분에 보여주는 내용을 설정
+                      default는 빈공백, 비밀번호 필드에는 사용하지 않는 속성
+        - maxlength : 최대길이를 설정
+        4. type="search" , type = "url", type="email", type="tel"
+        5. type="checkbox", type="raide"
+    -->
+    <form action="">
+      <fieldset>
+        <label for="">아이디 :</label>
+        <input type="text" size="8" value="개멍청해보여" maxlength="1" /><br />
+        <label for="">비밀번호 :</label>
+        <input type="password" maxlength="10" /><br />
+        <input type="submit" value="로그인" />
+      </fieldset>
+    </form>
+    이름<input type="search" /><br />
+    <input type="url" /><br />
+    <input type="tel" /><br />
+    <input type="email" />
+    <input type="checkbox" name="" id="" />등산 <input type="checkbox" />게임
+    <br />
+    <input type="radio" name="res" />예 <input type="radio" name="res" />아니오
+  </body>
+</html>

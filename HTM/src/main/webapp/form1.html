@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        <form></form> 태그
+        - 폼태그는 몇가지 속성을 사용해 입력받은 자료를 어떤 방식으로 서버페이지로 넘겨 요청할 것인지 지정하는 태그
+        - 기본문법
+            <form 속성="값" 속성="값">
+                입력 태그들을 넣을 수 있음
+                <input>
+            </form>
+        - <form>태그 속성의 종류
+            1) method : 사용자가 입력한 내용을 웹서버쪽 프로그램으로로 어떻게 넘겨줄것인지 지정하는 속서
+                        값은 get 과 post 둘 중 하나를 사용
+                        get 방식 : 요청할 데이터를 256~4,096바이트까지 서버 프로그램으로 넘길 수 있는 방식
+                                  웹브라우저 주소 창에서 사용자가 입력한 요청데이터들이 그대로 드러나는 단점
+                        post 방식 : 입력한 내용의 길이 제한을 받지 않고 사용자가 입력한 내용도 웹브라우저 주소 창에 드러나지 않음
+                                    보안에 좋음. 대량의 요청값이 있을때 이 방식 사용
+            <form>
+                <input name="text" type="text" placeholder="메시지 입력..!">
+            </form>
+            2) name :  js로 form 요소를 선택해서 가져올 태그의 이름을 지정해줌  
+            3) action : 폼태그로 감싼 input태그들에 입력한 데이터들을 web app 서버ㄹ가 실행하는 어떤 서버페이지로 넘겨줄지 경로를 설정
+            4) target : action 속성에 지정한 서버페이지를 현재 창이 아닌 다른 웹브라우저창에 열어 요청할 수 있도록 하는 속성
+            5) autocomplete : form 태그로 감싸져 있는 자식 태그에 데이터를 입력할때 전에 입력한 내용을 자동으료 표시
+                              autocomplete의 기본값은 on. 자동완성이 기본으로 켜져있음 한번이라도 input태그에 입력한적 있으면 이전 입력 내용 자동으로 보여줌 
+       
+            <form name="승똥이" method="post" action="a.jsp" autocomplete="off">
+                이름 : <input name="name" id="name" /> <br />
+                나이 : <input name="age" id="age" /><br />
+                주소 : <input name="addr" id="addr" /><br />
+                <input type="submit" value="전송" />
+            </form>
+    ----------------------------------------------------------------------------------------------------------------------------------------------
+    <fieldset></fieldset>태그
+    - 하나의 form 태그안에서 여러 구역을 나누어 표시할때 사용하는 태그 
+    - 기본문법
+        <fieldset>
+            <legend>그룹이름</legend>
+        </fieldset>
+    <label></label>태그
+    - 한줄 텍스트를 입력 받을 수 있는 input 태그 앞에 텍스트를 표시할 영역을 지정하는 태그
+    - 기본 문법
+        <label>label명<input></label>
+        lable태그 안에 input태그를 넣는 문법
+    - 기본 문법2
+        <label>label명</label>
+        <input id="id명">
+        label태그와 input태그를 따로 작성해놓고 label태그의 for 속성값과 input태그의 id속성값을 서로 같게 하여 서로 연결 
+    기본문법 1보단 기본문법 2를 사용하면 label태그와 input태그가 서로 떨어져 작성되도 둘은 연결할 수 있음
+    -->
+    <h1>레드향 주문하기</h1>
+    <form action="" method="get" autocomplete="on">
+      <fieldset>
+        <legend>상품 선택</legend>
+        <label>아이디(6자이상) <input id="" /></label>
+      </fieldset>
+      <fieldset>
+        <legend>배송정보</legend>
+        <label>아이디(6자 이상)</label>
+        <input type="date" />
+      </fieldset>
+    </form>
+  </body>
+</html>
