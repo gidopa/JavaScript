@@ -94,12 +94,12 @@ console.log(10>0 ? '10이 0보다 크다' : '10이 0보다 작다')
  * 논리연산자
  * && ||
  */
-console.log(true && false)
-// 지수 연산자 **
+console.log(true && false);
+/*   지수 연산자 **   */
 console.log(2 ** 2)
 let name;
 console.log(name);
-// ?? -> l-value가 null이거나 undeifned 일때 ?? 우측의 값을 반환해라 
+/*   ?? -> l-value가 null이거나 undeifned 일때 ?? 우측의 값을 반환해라   */
 name = name ?? '코드팩토리';
 console.log(name);
 name = name ?? '아이브';
