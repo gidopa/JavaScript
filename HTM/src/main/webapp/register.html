@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2" align="center">회원가입</td>
+      </tr>
+      <tr>
+        <td>이름</td>
+        <td><input type="text" /></td>
+      </tr>
+      <tr>
+        <td>ID</td>
+        <td>
+          <input type="text" />
+          <input type="submit" value="유효성확인" />
+        </td>
+      </tr>
+      <tr>
+        <td>비밀번호</td>
+        <td><input type="password" /></td>
+      </tr>
+      <tr>
+        <td>비밀번호확인</td>
+        <td>
+          <input type="password" />
+        </td>
+      </tr>
+      <tr>
+        <td>직업</td>
+        <td>
+          <select>
+            <option selected>직업명</option>
+            <option value="기타">기타</option>
+            <option value="회사원">회사원</option>
+            <option value="학생">학생</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>성별</td>
+        <td>
+          <input type="radio" name="gender" value="m" />남자
+          <input type="radio" name="gender" value="f" />여자
+        </td>
+      </tr>
+      <tr>
+        <td>취미</td>
+        <td>
+          <input type="checkbox" value="book" />독서
+          <input type="checkbox" value="book" />등산
+          <input type="checkbox" value="book" />낚시
+        </td>
+      </tr>
+      <tr>
+        <td>가입동기</td>
+        <td style="height: 200px"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="submit" value="가입" />
+          <input type="submit" value="다시 입력" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
