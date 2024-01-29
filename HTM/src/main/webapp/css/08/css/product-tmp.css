@@ -6,9 +6,19 @@ th, td {
   padding:10px 20px; 
 }
 div {
-  border:1px solid #222;  /* 테두리 */
+  border:1px solid #222;/* 테두리 */
+  padding: 10px 20px;
+  box-shadow: 0 0 0 1pxrgba(0, 0, 0, 0.2);
 }
 #container {
   width:600px;  /* 컨테이너의 너비 */
   border:none;    /* 테두리 없앰 */
+  overflow: hidden; /* 겹치는 부분의 테두리를 숨기기 위해 overflow 속성 추가 */
+}
+#description, #receipe {
+  border-top: none; /* 각 div의 상단 테두리를 없애서 겹치는 부분의 선이 얇게 보이도록 함 */
+}
+
+#receipe {
+  border-bottom: none; /* 각 div의 하단 테두리를 없애서 겹치는 부분의 선이 얇게 보이도록 함 */
 }
