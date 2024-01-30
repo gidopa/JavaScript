@@ -1,3 +1,21 @@
+<!--
+    속성선택자
+    - 속성선택자는 HTML태그에서 사용할 수 있는 속성과 값을 사용해 HTML요소를 선택함
+    문법
+      [속성]{
+        css코드
+      }
+      [속성="값"]{
+        css코드
+      }
+    -문자열 속성 선택자 종류
+    문법
+      [속성~=문자열]      속성값에 문자열이 포함되어 있으면 해당 요소 선택
+      [속성|=문자열]      속성값이 문자열과 같거나 -기호로 시작하면 해당 요소 선택
+      [속성^=문자열]      속성의 값이 문자열로 시작하면 해당 요소 선택
+      [속성$=문자열]      속성값이 문자열로 끝나면 해당 요소 선택
+      [속성*=문자열]      속성값에 문자열이 포함되어 있으면 해당 요소 선택
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,13 +24,30 @@
     <title>Document</title>
     <style>
       /*a태그에 타입에 속성값까지 선택*/
-      a[target="_blank"] {
+
+      [href="#"] {
+        color: blue;
+      }
+      [href=""] {
         color: red;
+      }
+      [target="_blank"] {
+        color: black;
+      }
+      a[class="a3"] {
+        color: coral;
+      }
+      [id="a4"] {
+        background-color: dodgerblue;
+        color: gold;
       }
     </style>
   </head>
   <body>
-    <a href="#">기본 a태그</a>
-    <a href="" target="_blank">새창으로 열리는 a태그</a>
+    <a href="#" target="_self">기본 a태그</a><br />
+    <a href="" target="_blank">새창으로 열리는 a태그</a><br />
+    <a href="" target="_self">또 다른 a태그</a><br />
+    <a class="a3">class 속성이 부여된 a태그</a><br />
+    <a id="a4">id속성이 부여된 a태그</a>
   </body>
 </html>
