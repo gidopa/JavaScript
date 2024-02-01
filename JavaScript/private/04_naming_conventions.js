@@ -5,7 +5,7 @@
  *      1Name
  *  4) 키워드는 변수명으로 사용 불가능
  */
-let $ive = '아이브';
+let $ive = "아이브";
 const _yujin = `안유진`;
 
 console.log($ive);
@@ -17,5 +17,8 @@ console.log(_yujin);
  * 3)PascalCase - 카멜케이스와 같은데 첫글자도 대문자를씀
  */
 
-const anYujin = '안유진';
+const anYujin = "안유진";
 console.log(anYujin);
+
+let ahn = "아아아ㅏㅇ";
+console.log("ahn", ahn);
