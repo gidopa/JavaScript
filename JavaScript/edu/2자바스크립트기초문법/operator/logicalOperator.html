@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        && || ! 똑같다 !
+        &&
+        거짓으로 평가되면 해당 피연산자를 반환 true이면 마지막 평가된 피연산자 반환
+        논리연산자에는 한가지 특징이 있음 어떤 피연산자든 모두 논리형으로 평가
+        number든 string이든 전부 논리값으로 평가
+        js의 자료형중 ""(빈문자열), undefined, 0, null 은 false
+        나머지는 true
+        논리연산자가 반드시 true false를 반환하는것이 아니라 평과 결과에 따라 
+        피연산자를 반환할 수도 있음
+    -->
+    <!--
+        ||는 피연산자를 왼쪽부터 평가해 참으로 평가된 피연산자를 즉시 반환
+        만약 모든 피연산자가 거짓이면 마지막에 평가된 피연산자를 반환
+    -->
+    <!--
+        ! 피연산자나 식을 평가한 논리값의 반대값
+        다만 !연산자는 괄호로 식을 어떻게 묶는지에따라 결과가 달라질 수 있음
+        !true && false와 !(true && false)는 결과가 다름 
+            false               true
+    -->
+    <script type="text/javascript">
+      let a = true;
+      let b = false;
+      let c = true;
+      let res;
+      res = (a && b) || (a && c);
+      document.write(res + "<br>");
+      document.write(true && true && true + "<br>");
+      document.write("" && "cat" + "<br>");
+      console.log("" && "cat");
+      document.write("" || "cat" + "<br>");
+      console.log(undefined && "cat");
+      document.write(undefined && "cat", "<br>");
+      document.write("dsad" && "cat" + "<br>");
+      document.write(0 && "cat", "<br>");
+      document.write(!false + "<br>");
+    </script>
+  </body>
+</html>
