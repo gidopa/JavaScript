@@ -99,7 +99,7 @@ console.log(true && false);
 console.log("cat" && "dog");
 console.log("cat" && "dog" && "bird");
 console.log(false || true || false);
-console.log(false && null);
+console.log(null && false);
 console.log("" || "dog" || true);
 console.log(null || undefined);
 console.log("dog" || "cat");
@@ -110,7 +110,7 @@ console.log(!(true && false));
 console.log();
 /*   지수 연산자 **   */
 console.log(2 ** 2);
-let name;
+let name = null;
 console.log(name);
 /*   ?? -> l-value가 null이거나 undeifned 일때 ?? 우측의 값을 반환해라   */
 name = name ?? "코드팩토리";
