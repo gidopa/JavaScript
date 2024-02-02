@@ -2,24 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <title>while문</title>
-
-    <!-- 
-	문제 풀기 : while문을 사용하여 1부터 30까지의 숫자중
-				       2의 배수이고
-					   6의 배수인 숫자만 출력 하기
- -->
-
+    <title>continue문</title>
     <script type="text/javascript">
       //<![CDATA[
-      var i = 1;
+      let i = 1;
       while (true) {
-        if (i % 6 == 0) {
-          document.write(i + "<br>");
-        }
-        if (i > 30) {
+        if (i > 10) {
           break;
         }
+        if (i % 2 == 0) {
+          i++;
+          continue;
+        }
+        document.write(i + "<br>");
         i++;
       }
 
