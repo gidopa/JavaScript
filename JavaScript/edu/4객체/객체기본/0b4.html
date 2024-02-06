@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<!-- 
+		객체의 데이터 관리 방법 이해하기
+	
+		  - 자바스크립트에서 자료형을 크게 기본자료형과 참조자료형으로 구분합니다
+		    나누는이유는 데이터 관리 방식이 다르기 떄문입니다.
+	 -->
+	<script type="text/javascript">
+	
+	//기본자료형 데이터 관리 
+	
+		//변수에 할당된 데이터를 다른변수에 다시 할당하면?
+		//변수 num과 copyNum은 각각 독립적으로 10이라는 값을 가지고 있는 상태가 됩니다.
+		let num = 10;  //10 
+		let copyNum = num; //10
+		
+		num = 20; //num변수에 20을 다시 저장시키면?
+				  //num변수는 10이 삭제되고 20이 저장된다.
+				 
+				  //copyNum변수는 독립된 메모리를 가지고 있으므로
+				  //기존에 저장된 10이 저장되어 있는 상태다 
+		console.log(num);
+		console.log(copyNum);
+	
+	//참조자료형 데이터 관리
+	
+		//기본자료형과 다르게 객체와 같은 참조자료형은 변수공간에 데이터가 할당되는 것이아니고,
+		//객체의 주소번지가 할당됩니다.
+		const person = {
+			
+							name : "Hong Gildong"
+			
+						};
+
+		const copyPerson = person;//객체의 주소를 저장 
+		
+	
+		person.name = "Hong"; //참조변수person에 저장된 객체 내부에 접근하여
+							  //name속성과 같이 저장된 값 "Hong Gildong"을!!!
+							  //"Hong"으로 변경하는 것 가능하다.
+							  
+		console.log(person.name);  //Hong
+		console.log(copyPerson.name); //Hong
+							  
+							  
+		//위 상태에서 person참조변수에 다른 객체{}를 생성하여 재할당하려고 한다면?
+		//재할당이 불가능합니다.! 왜! const키워드는 상수를 나타내는 키워드이기떄문에
+		//다른 객체의 주소를 변경해서 저장할수 없습니다.
+//		person = {
+			
+//			name : "coding"
+				
+//		}; //오류 발생
+		 
+		
+		
+	
+	
+	
+	
+		
+	
+	</script>
+
+
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
