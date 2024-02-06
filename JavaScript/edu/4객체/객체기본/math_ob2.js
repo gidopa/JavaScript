@@ -33,8 +33,8 @@ if (ans === tNum) {
 }
 document.write("정답은 :" + "<br>");
 document.write(
-  "<img src='/JavaScript/edu/4객체/images/math_img_" +
+  '<img src="/JavaScript/edu/4객체/images/math_img_' +
     ans +
-    ".jpg' alt=`가위바위보`>" +
+    '.jpg" alt="가위바위보">' +
     "<br>"
 );
