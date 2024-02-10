@@ -9,4 +9,4 @@ const person ={
 const copyPerson = person;
 person.name = "Hong";
 console.log('person.name',person.name)
-console.log('copyPerson.name',copyPerson.name)
+console.log('copyPerson.name',copyPerson.name) // 얕은 복사 
