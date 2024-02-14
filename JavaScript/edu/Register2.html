@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<style type="text/css">
+		
+		span {
+			color: red;
+		}
+	
+	</style>
+
+	
+
+</head>
+<body>
+<table border="1" align="center">
+        <tr>
+            <td colspan="2" align="center">회원가입</td>
+        </tr>
+        <tr>
+            <td>*이름</td>
+            <td><input type="text" name="uName" id="uName" /></td>
+        </tr>
+        <tr>
+            <td>*ID</td>
+            <td><input type="text" name="uID" id="uID"/></td>
+        </tr>
+        <tr>
+            <td>*비밀번호</td>
+            <td><input type="password" name="uPWD" id="uPWD"/></td>
+        </tr>
+        <tr>
+            <td>*비밀번호 확인</td>
+            <td><input type="password" name="uPWD_Confirm" id="uPWD_Confirm"/></td>
+        </tr>
+        <tr>
+            <td>*직업</td>
+            <td>
+                <select name="work" id="work">
+                    <option selected>직업명</option>
+                    <option value="기타">기타</option>
+                    <option value="회사원">회사원</option>
+                    <option value="학생">학생</option>
+                </select>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>*성별</td>
+            <td>
+                남자<input type="radio" name="sex" id="s1" value="male"/>
+                여자<input type="radio" name="sex" id="s2" value="female"/>
+            </td>
+        </tr>
+        <tr>
+            <td>*취미</td>
+            <td>
+                <input type="checkbox" name="hobby" id="h1" value="독서"/>독서
+                <input type="checkbox" name="hobby" id="h2" value="등산"/>등산
+                <input type="checkbox" name="hobby" id="h3" value="낚시"/>낚시
+            </td>
+        </tr>
+        <tr>
+            <td>*가입동기</td>
+            <td>
+                <textarea rows="20" cols="100" name="motivation"/></textarea>
+            
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="button" value="가입"/>
+            </td>
+        </tr>
+    </table>
+    
+    <script type="text/javascript">
+    /*
+             문제. 자바스크립트 문법을 사용하여 회원가입 폼의 유효성을 검사하는 코드입니다.
+             위의  HTML태그 내용과 같은 회원가입 폼이 있다고 했을 때  자바스크립트 문법 만을 이용해서 
+             모든 입력이 되었는지,  
+             아이디를 3자 ~ 7자 사이로 입력했는지,  
+             비밀번호를 4자 ~ 10자 사이로 입력했는지,  
+             입력한 비밀번호와 비밀번호 확인의 데이터가 같은지, 
+             직업을 선택했는지,  
+             성별을 선택 또는 체크 했는지,  
+             취미를 하나 이상 체크 했는지, 
+             가입동기를 입력 했는지 유효성 검사 하는 코드를 전체 작성 해 주고  각 줄에 주석을 다시오.
+    */
+    
+    // 가입 버튼을 선택해서 가져와 변수에 저장
+    // <input type="button" value="가입"/>
+    var joinButton = document.querySelector('input[type="button"]');	
+    
+    //가입 버튼에 click이벤트를 등록하고 click이벤트가 발생하면 처리할 이벤트처리 익명함수 정의
+    joinButton.addEventListener('click', function(){
+    	
+    	//모든 입력 태그에 입력되었는지 유효성 검사를 함수를 호출해 이벤트를 처리함
+    	
+    	if(validateForm()){
+    		alert('모두 정상적으로 입력해서 회원가입 합니다.');
+    	}
+    	
+    });
+    
+    //가입 버튼을 클릭했을때 유효성 검사하는 이벤트 처리 함수 만들기
+    function validateForm(){
+    	
+    	//이름 입력 확인을 위해 
+    	//이름 입력할수 있는 <input id="uName">요소를 선택해 입력한 값 얻기 
+    	var uName = document.getElementById("uName").value;
+    	
+    	//이름을 입력 하지 않았다면?
+    	if(uName === ''){
+    		alert('이름을 입력 해 주세요');
+    		return false;//조건을 판단할 값으로  이름입력 안했음을 나타내는 false를 반환
+    	}
+    	
+    	//아이디 입력 확인을 위해
+    	//아이디 입력할수 있는 <input id="uID">요소를 선택해 입력한 값 얻기
+    	var uID = document.getElementById("uID").value;
+    	
+    	//아이디 입력 판단
+    	if(uID === ''){
+    		alert('아이디를 입력 해 주세요');
+    		return false;//아이디 입력 하지 않았음을 나타내는 false를 반환 
+    	}
+    	
+    	//아이디 입력  3자 ~ 7자 사이로 입력 했는지 판단 
+    	if(uID.length < 3 || uID.length > 7 ){
+    		alert('아이디는 3자에서 7자 사이로 입력해 주세요');
+    		return false;
+    	}
+    	
+    	
+    	//비밀번호를 4자 ~ 10자 사이로 입력했는지,  
+        var uPWD = document.getElementById('uPWD').value;
+    	
+    	if(uPWD === '' && uPWD.length < 4 || uPWD.length > 10){
+    		alert('비밀번호는 4자 ~ 10자 사이로 입력 해주세요.');
+    		return false;
+    	}
+    
+    	//비밀번호확인 입력 <input>에 입력한 데이터 얻기 
+    	var uPWDConfirm = document.getElementById('uPWD_Confirm').value;
+    	
+    	//입력한 비밀번호와 비밀번호 확인에 입력한 비밀번호가 다르냐
+    	if( uPWD !==  uPWDConfirm ){
+    		alert('비밀번호와 비밀번호확인이 일치 하지 않습니다.');
+    		return false;
+    	}
+    	
+    	//직업 선택 확인       <select id="work"> <option value="선택한값"> 들중에 하나라도 선택하지 않으면?
+//     	<select name="work" id="work">
+//            <option selected>직업명</option>
+//            <option value="기타">기타</option>
+//            <option value="회사원">회사원</option>
+//            <option value="학생">학생</option>
+//         </select>
+    			
+    	//option중에 하나를 선택하면 option중에 value속성의 값을 선택한 값으로 얻는다		
+    	var work = document.getElementById('work').value; 
+    	
+    	//option 들 중에서 하나라도 선택되지 않았다면?
+    	if(work === '직업명'){
+ 
+    		alert('직업을 선택 해주세요');
+    		return false;
+    	}
+    	
+        //성별을 선택 또는 체크 했는지
+//       남자<input type="radio" name="sex" id="s1" value="male"/>
+//       여자<input type="radio" name="sex" id="s2" value="female"/>
+        
+        var sex1 = document.getElementById('s1').checked; //checked속성을 적으면 true또는 false를 반환 받는다.
+        											     //true는 체크됨, false는 체크안됨
+        var sex2 = document.getElementById('s2').checked;
+        
+        if( !sex1 && !sex2 ){//하나라도 라디오 버튼이 체크 되지 않으면?
+        	 alert('성별을 체크해 주세요.');
+        	 return  false;
+        }
+        
+        
+        //취미를 하나 이상 체크 했는지, 
+//     	 <input type="checkbox" name="hobby" id="h1" value="독서"/>독서
+//       <input type="checkbox" name="hobby" id="h2" value="등산"/>등산
+//       <input type="checkbox" name="hobby" id="h3" value="낚시"/>낚시
+    	
+    	var hobby1 = document.getElementById('h1').checked; //체크 안되어 있으면 false
+    	var hobby2 = document.getElementById('h2').checked; //체크 안되어 있으면 false
+    	var hobby3 = document.getElementById('h3').checked; //체크 안되어 있으면 false
+    	
+    	//  !false  && !false  && !false
+    	if( !hobby1 && !hobby2 && !hobby3 ){ //하나라도 체크안되어 있으면 ???? 조건식의 결과는 true이므로 
+    			   
+    			alert('취미 하나 이상을 체크 채 주세요');
+    			return false;
+    	}
+    	   	
+    	//가입 동기 입력 확인
+    	// <textarea rows="20" cols="100" name="motivation"/></textarea>
+    	
+    	var motivation = document.getElementsByName('motivation')[0].value;
+    	
+    	if(motivation === ''){//입력안했으면
+    		alert('가입 동기를 입력하세요');
+    		return  false;
+    	}
+    	
+    
+    	return true; //모든 유효성 검사 통과 하면  true값을 반환   	
+    }
+    
+    
+    
+    
+    
+    </script>
+    
+    
+    
+</body>
+</html>

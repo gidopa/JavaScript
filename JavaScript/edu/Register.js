@@ -10,19 +10,33 @@
              취미를 하나 이상 체크 했는지, 
              가입동기를 입력 했는지 유효성 검사 하는 코드를 전체 작성 해 주고  각 줄에 주석을 다시오.
     */
-
+let joinButton = document.querySelector("input[type = 'button']");
+joinButton.addEventListener("click", function () {
+  if (validateForm()) {
+    alert("정상 회원가입 됨.");
+    location.reload();
+  }
+});
+// 변수 얻어올 함수 정의
+function getElementByIDValue(id) {
+  return document.getElementById(`${id}`).value;
+}
+// 변수 얻어올 함수 정의
+function getElemetByIdCheck(id) {
+  return document.getElementById(`${id}`).checked;
+}
 function validateForm() {
   // 입력받은 항목의 값들을 변수로 저장
-  let uName = document.getElementById("uName").value;
-  let uID = document.getElementById("uID").value;
-  let uPWD = document.getElementById("uPWD").value;
-  let uPWD_Confirm = document.getElementById("uPWD_Confirm").value;
-  let work = document.getElementById("work").value;
-  let sexMale = document.getElementById("s1").checked;
-  let sexFemale = document.getElementById("s2").checked;
-  let hobbyBook = document.getElementById("h1").checked;
-  let hobbyMountain = document.getElementById("h2").checked;
-  let hobbyFishing = document.getElementById("h3").checked;
+  let uName = getElementByIDValue("uName");
+  let uID = getElementByIDValue("uID");
+  let uPWD = getElementByIDValue("uPWD");
+  let uPWD_Confirm = getElementByIDValue("uPWD_Confirm");
+  let work = getElementByIDValue("work");
+  let sexMale = getElemetByIdCheck("s1");
+  let sexFemale = getElemetByIdCheck("s2");
+  let hobbyBook = getElemetByIdCheck("h1");
+  let hobbyMountain = getElemetByIdCheck("h2");
+  let hobbyFishing = getElemetByIdCheck("h3");
   // id가 없어 name으로 해당 태그를 가져온다
   // getElementsByName으로 가져와서 그 중에 0번 index에 해당하는 가입동기 부분을 선택
   // 왜 id가 아니냐고
@@ -88,7 +102,5 @@ function validateForm() {
   } else {
     document.getElementById("motivationError").innerText = "";
   }
-  alert("가입완료");
-  location.reload();
   return true;
 }
