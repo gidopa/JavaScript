@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: gray;
+      }
+      .popup {
+        background-color: #fff;
+        width: 300px;
+        height: 250px;
+        border: 1px solid #222;
+        padding: 10px;
+      }
+      .popup button {
+        position: absolute;
+        bottom: 20px;
+        right: 30px;
+        border: 1px solid #ccc;
+        font-size: 0.8em;
+      }
+      #notice {
+        position: absolute;
+        left: 100px;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>문서를 요청하면 팝업 창 열어줌</p>
+    <div class="popup" id="notice">
+      <h1>공지사항</h1>
+      <ul>
+        <li>공지사항 내용</li>
+        <li>공지사항 내용</li>
+        <li>공지사항 내용</li>
+        <li>공지사항 내용</li>
+      </ul>
+      <button>닫기</button>
+    </div>
+    <script src="popup_layer.js"></script>
+  </body>
+</html>
