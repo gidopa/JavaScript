@@ -16,7 +16,7 @@ $(function () {
       return elem; //[ {"area":"서울", "name":"무대리"},  {"area":"서울", "name":"빅마마"}  ]
     }
   });
-
+  // das?
   console.log(arr2); //새롭게 가공된 배열 출력!
 
   console.log("======== first End ========");
