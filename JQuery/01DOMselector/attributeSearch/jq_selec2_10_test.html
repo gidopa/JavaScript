@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 탐색 선택자 </title>  
+		<!-- 
+			 배열관련 메소드  종류
+			 
+			 index()
+			 
+			 	-  지정 선택요소를 찾아서 요소저장된 index위치 번호 반환 하는 메소드 
+			 	-  문법
+			 			$("요소들선택").index("지정 선택요소");
+			 	-  해석 : 지정 선택요소를 찾아서  찾은 요소의 index위치번호를 반환합니다.		
+		 -->
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+		<script>
+		//주제 : index()메소드를 사용하여 문단태그(<body></body>)사이에 있는 html태그중에서
+		//     <li></li>태그의 id속성값이  "list3"인 요소를 찾아  index번호를 반환시키는 예제.
+		
+		$(function(){
+			
+			//li요소를들선택해 오는데.. 그중에서도 id="list3"인 <li>요소의 index위치 번호를 반환.
+			//만약 $("없는요소선택") 해오면  index()메소드는  -1을 반환합니다.
+			var idxNum = $("li").index($("#list3"));
+				
+			console.log(idxNum);//2
+		});
+</script>
+</head>
+<body>
+	<h1>배열 관련 메서드</h1>
+	<ul>
+		<li>내용1</li>
+		<li>내용2</li>
+		<li id="list3">내용3</li>
+		<li>내용4</li>
+	</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
