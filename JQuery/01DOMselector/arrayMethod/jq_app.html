@@ -11,6 +11,19 @@
       const arr1 = ["apple", "banana", "oreange"];
       const arr2 = ["grape", "lemon", "peach"];
       const mergerdArr = $.merge(arr1, arr2);
+      console.log("mergerdArr", mergerdArr);
+      const index = $.inArray("apple", mergerdArr);
+      console.log("index", index);
+
+      const filterArr = $.grep(mergerdArr, function (e) {
+        return e.indexOf("a") != -1;
+      });
+      console.log("filterArr", filterArr);
+      const resultArr = $.map(filterArr, function (e) {
+        return e.toUpperCase();
+      });
+      //
+      console.log("resultArr", resultArr);
     </script>
   </body>
 </html>
