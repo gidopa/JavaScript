@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>탐색 선택자</title>
+
+    <!-- 
+	탐색선택자 중에서  위치탐색 선택자  
+		
+		종류   -> even 선택자, odd선택자 
+		
+		even 선택자
+		- 선택한 요소들은 배열에 저장되므로 배열에 저장된 모든 요소들중에서도  짝수 index번호 위치에 저장된 요소들만 최종 선택    
+		- 문법
+				$("요소들선택:even")
+		
+		odd 선택자
+		- 선택한 요소들은 배열에 저장되므로 배열에 저장된 모든 요소들중에서도  홀수 index번호 위치에 저장된 요소들만 최종 선택    
+		- 문법
+				$("요소들선택:odd")
+		
+ -->
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="select_even_odd.js"></script>
+  </head>
+  <body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu">
+      <li>내용1</li>
+      <li>내용2</li>
+      <li>내용3</li>
+      <li>내용4</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>탐색 선택자</title>
+
+    <!-- 
+	탐색선택자 중에서  위치탐색 선택자  
+		
+		종류   -> eq(index) 선택자,  lt(index) 선택자,   gt(index) 선택자  
+		
+		eq(index) 선택자 equals
+			- 선택 한 요소들 중에서  지정한 index 위치에 저장된 요소만 선택하는 선택자
+			- 문법
+				  $("요소들선택:eq(index)")   또는  $("요소들선택").eq(index)
+				  
+		lt(index) 선택자 less than
+			- 선택한 요소들 중에서  지정한 index 위치 이전의 index위치에 저장된 요소들만 선택 하는 선택자
+			- 문법
+				  $("요소들선택:lt(index)")   
+				  
+		gt(index) 선택자 greater than
+			- 선택한 요소들 중에서 지정한 index 위치보다 큰  index위치에 저장된 요소들만 선택 하는 선택자
+			- 문법
+				  $("요소들선택:gt(index)")		  
+				  		  
+ -->
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="select_index.js"></script>
+  </head>
+  <body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu">
+      <li>내용1</li>
+      <!--  index 0 -->
+      <li>내용2</li>
+      <!--  index 1 -->
+      <li>내용3</li>
+      <!--  index 2 -->
+      <li>내용4</li>
+      <li>내용5</li>
+    </ul>
+  </body>
+</html>

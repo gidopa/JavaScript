@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>탐색 선택자</title>
+
+    <!-- 
+		탐색선택자 중에서  위치탐색 선택자  
+		
+		종류   -> first 선택자, last선택자 
+		
+		first선택자 사용 문법
+		
+		1.  $("요소들선택:first")
+		         요소들을 선택해와서 :first 선택자를 이용해  요소들중에서도 첫번째에 작성된 요소 하나만 탐색해서 최종 선택합니다.  
+		
+		2.  $("요소들선택").first()
+	                요소들을 선택해와서  .first() 선택자를 이용해  요소들중에서도 첫번째에 작성된 요소 하나만 탐색해서 최종 선택합니다.  
+
+	    last선택자 사용 문법
+	    
+	    1.  $("요소들선택:last")
+	               요소들을 선택해와서 그중에서 :last 선택자를 이용해 마지막에 작성된 요소 하나만 탐색해서 최종 선택합니다.
+	               
+	    2.  $("요소들선택").last()
+	               요소들을 선택해와서 그중에서 하나만 최종 선택할때  .last() 선택자를 사용하여 마지막에 작성된 요소 하나만 최종 선택합니다.            		 
+ -->
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="select_first_last.js"></script>
+  </head>
+  <body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu">
+      <li>내용1</li>
+      <li>내용2</li>
+      <li>내용3</li>
+      <li>내용4</li>
+    </ul>
+  </body>
+</html>
