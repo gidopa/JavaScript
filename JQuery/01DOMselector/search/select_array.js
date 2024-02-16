@@ -20,7 +20,6 @@ $(function () {
   //$("#menu2 li")
   //[   <li>내용2-1</li>,    <li>내용2-2</li>,     <li>내용2-3</li>   ]
   //         0                       1                   2                index
-
   //$.each메소드를 호출하면    DOM요소를 배열에 담아 선택해 와서   배열에 담긴  DOM요소들을 반복해서 사용 할수 있다.
   $.each($("#menu2 li"), function (i, elt) {
     console.log(i + ":", elt);

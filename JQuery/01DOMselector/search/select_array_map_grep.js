@@ -6,7 +6,6 @@ $(function () {
     { area: "서울", name: "빅마마" },
   ];
   //         0                                  1                               2                        3
-
   //arr1배열에 저장된 객체 수만큼 콜백functon을 반복 실행하게 합니다.
   var arr2 = $.map(arr1, function (elem, index) {
     //elem매개변수에는   arr1배열에 저장된 { }객체의 갯수만큼 반복해서 차례대로(index0부터 ~ 3의 객체)전달받습니다.
