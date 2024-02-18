@@ -7,3 +7,4 @@ $(function () {
   //   $("h2#a").css("color", "red");
 });
 document.getElementsByTagName("h2")[0].style.color = "red";
+document.getElementById('a').style.color = 'aqua';
