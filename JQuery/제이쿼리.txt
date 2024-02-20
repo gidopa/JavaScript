@@ -130,9 +130,8 @@
 		       		  						의미 - 선택한 요소에 지정한 하위요소를 선택합니다.
 		       		  						
 		       		  	---------- jq_selec1_8.html 파일 실습					
-		       		  						
-		       		  						
-		       		  						
+
+											
 		       		  	자식 요소 선택자  $("요소선택>자식요소명")
 		       		  						의미 - 선택한 요소를 기준으로 자식관계에 지정한 요소만 선택합니다.
 		       		  						
@@ -243,7 +242,7 @@
 			                                                 복제 하거나 새로 생성된 요소를 의도한 위치에 삽입 시키는 메소드 
 			        
 			       
-			         2-1. 속성조작 메소드 실습
+			         2-1. 속성조작 메소드 실습  ***
 			         
 			         ------------------jq_selec3_1_test.html 파일 실습       html()  ,  text() 메소드
 					 ------------------jq_selec3_2_test.html 파일 실습       attr()  ,  removeAttr() 메소드	
@@ -274,7 +273,7 @@
 					
 					 ------------------jq_selec3_11_test.html 파일 실습   clone(), empty(), remove() 메소드
 					
-					 ------------------jq_selec3_12_test.html 파일 실습   replaceAll(), replaceWith() 메소드
+					 ------------------jq_selec3_12_test.html 파일 실습   replaceAll(), replaceWith() 메소드 ***
 					
 					 ------------------jq_selec3_13_test.html 파일 실습   unwrap(), wrap(), wrapAll(), wrapInner() 메소드
 
