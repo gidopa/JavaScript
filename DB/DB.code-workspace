@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"name": "DB",
+		"path": "."
+	},
+	{
+		"name": "JavaScript-1",
+		"path": "../../git/JavaScript-1"
+	}
+],
+  "settings": {}
+}
