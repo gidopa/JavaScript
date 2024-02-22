@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>이벤트</title>
+    <style>
+      body {
+        font: 14px Malgun Gothic, "맑은고딕", sans-serif;
+      }
+      .zoomBtnZone {
+        font-size: 14px;
+      }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(function () {
+        // 기본 폰트사이즈 14
+        var baseFontSize = 14;
+        $(".zoomBtnZone button").on("click", zoomInOut);
+        function zoomInOut() {
+          // 클릭이벤트가 발생한 DOM 객체에 zoomOutBtn 이라는 속성값이 있으면
+          if ($(this).hasClass("zoomOutBtn")) {
+            // <button class="zoomOutBtn">-</button>
+            //폰트 사이즈를 8까지 줄임
+            if (baseFontSize <= 8) return false;
+            baseFontSize--;
+          } else if ($(this).hasClass("zoomInBtn")) {
+            //<button class="zoomInBtn">+</button>
+            // 폰트사이즈 20까지 키움
+            if (baseFontSize >= 20) return false;
+            baseFontSize++;
+            // 기본 사이즈는 14
+          } else {
+            // <button class="originBtn">100%</button>
+            baseFontSize = 14;
+          }
+
+          //<p class="fontSize">14px</p> 요소영역의 컨텐츠영역에 들어갈 글자크기의 값을  baseFontSize변수의 값으로 사용
+          $(".fontSize").text(baseFontSize + "px");
+
+          // 문서의 폰트사이즈 설정
+          $("body").css({ fontSize: baseFontSize + "px" });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <p class="zoomBtnZone">
+      <button class="zoomOutBtn">-</button>
+      <button class="originBtn">100%</button>
+      <button class="zoomInBtn">+</button>
+    </p>
+    <p class="fontSize">14px</p>
+    <div id="wrap">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat
+      consectetur nibh, ut luctus urna placerat non. Phasellus consectetur nunc
+      nec mi feugiat egestas. Pellentesque et consectetur mauris, sed rutrum
+      est. Etiam odio nunc, ornare quis urna sed, fermentum fermentum augue. Nam
+      imperdiet vestibulum ipsum quis feugiat. Nunc non pellentesque diam, nec
+      tempor nibh. Ut consequat sem sit amet ullamcorper sodales.
+    </div>
+  </body>
+</html>

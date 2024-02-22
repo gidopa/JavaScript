@@ -87,21 +87,19 @@ $(function () {
 $("form:eq(1)").on(
                 {
                   "focusin" : function(){ 
-                      
                       $("#user_id_2, #user_pw_2",this).on(
-                                                            {
-                                                              "focus" : function(){ $(this).css("background-color","pink");   },
-                                                            }
-                                                            );   
+                            {
+                "focus" : function(){ $(this).css("background-color","pink");   },
+                                }
+                        );   
                       
                   },
                   "focusout" : function(){ 
-                                                
                       $("#user_id_2, #user_pw_2",this).on(
-                                                            {
-                                                              "blur" : function(){ $(this).css("background-color","white");   },
-                                                            }
-                                                          );   
+                        {
+                    "blur" : function(){ $(this).css("background-color","white");   },
+                                    }
+                                );   
                       
                   }
                 }
