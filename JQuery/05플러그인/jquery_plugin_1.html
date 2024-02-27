@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 
+        제이쿼리 ui 플러그인을 사용해 드래그 레이어 창 만들기
+        제이쿼리 ui 플러그인 사용을 위해 순서1, 순서2 순서대로 
+        script 선언문을 작성 해놓고 사용해야 함
+        순서1. jquery 라이브러리 파일 연동
+        순서2. 다운받은 jquery UI플러그인 js를 연동해야함
+    -->
+    <link rel="stylesheet" href="js/jquery-ui.min.css" />
+    <style>
+      .layer_popup {
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        cursor: move;
+      }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  </head>
+  <body>
+    <!-- 드래그 레이어창 영역-->
+    <div class="layer_popup">
+      <img src="images/pic_1.jpg" />
+    </div>
+    <script src="jquery_plugin_1.js"></script>
+  </body>
+</html>

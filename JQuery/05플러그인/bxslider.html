@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  </head>
+  <body>
+    <div class="bxslider">
+      <div>
+        <img src="images/pic_1.jpg" alt="" />
+      </div>
+      <div>
+        <img src="images/pic_2.jpg" alt="" />
+      </div>
+      <div>
+        <img src="images/pic_3.jpg" alt="" />
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(".bxslider").bxSlider({
+        mode: "horizontal", //fade -> 투명하게 사라지면서 슬라이드가 흐름
+        auto: true, // 슬라이드 자동전환 여부 설정
+        speed: 1000,
+        slideWidth: 600, // 슬라이드마다 너비값을 같게 설정하는 속성
+        autoControls: true, //슬라이드 자동전환을 위한 컨트롤을 추가할것인지
+        pager: true, // 화면에 보여지는 슬라이드의 이미지 영역을 알리는 불릿
+      });
+    </script>
+  </body>
+</html>

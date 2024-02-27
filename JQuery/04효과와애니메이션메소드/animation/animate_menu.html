@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*상단 메뉴 스타일*/
+      .menu {
+        display: flex;
+        background-color: #333;
+      }
+      .menu-item {
+        color: white;
+        text-decoration: none;
+        padding: 0 16px;
+        line-height: 40px;
+      }
+      .submenu {
+        display: none;
+        position: relative;
+        background-color: white;
+        min-width: 200px; /*div 영역의 최소 너비 설정*/
+        overflow: auto; /*하위 메뉴 div영역의 너비를 초과한 내용은 스크롤되게 설정*/
+      }
+      .submenu > a {
+        display: block; /*하위 메뉴의 a태그를 블록 요소로 설정*/
+        padding: 12px 16px;
+        color: white;
+        text-decoration: none;
+      }
+      /*하위 메뉴 a들중에서도 마우스 포인터가 올라간 a만 선택해 스타일 정의*/
+      .submenu > a:hover {
+        background-color: #ddd;
+      }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <div class="menu">
+      <a href="#" class="menu-item">Menu1</a>
+      <div class="menu-with-submenu">
+        <a href="#" class="menu-item">Menu2</a>
+        <div class="submenu">
+          <a href="#">Submenu 1</a>
+          <a href="#">Submenu 2</a>
+          <a href="#">Submenu 3</a>
+        </div>
+      </div>
+
+      <a href="#" class="menu-item">Menu3</a>
+      <a href="#" class="menu-item">Menu4</a>
+      <a href="#" class="menu-item">Menu5</a>
+      <a href="#" class="menu-item">Menu6</a>
+    </div>
+    <script src="animate_menu.js"></script>
+  </body>
+</html>
